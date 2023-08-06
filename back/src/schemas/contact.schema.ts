@@ -15,11 +15,18 @@ const contactSchemaRequest = contactSchema.omit({
 
 const contactSchemaResponse = contactSchema;
 
-const contactsSchemaRes = z.array(contactSchemaResponse);
+const contactsSchemaRes = z.array(contactSchema);
+
+const contactSchemaUpdate = contactSchema
+  .omit({
+    id: true,
+  })
+  .partial();
 
 export {
   contactSchema,
   contactSchemaRequest,
   contactsSchemaRes,
   contactSchemaResponse,
+  contactSchemaUpdate,
 };
