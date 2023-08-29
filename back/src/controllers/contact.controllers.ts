@@ -6,9 +6,9 @@ import { deleteContactService } from "../services/contact/deleteContact.service"
 
 const createContactController = async (req: Request, res: Response) => {
   const userId = res.locals.userId;
-  const newTask = await createContactService(req.body, userId);
+  const newContact = await createContactService(req.body, userId);
 
-  return res.status(201).json(newTask);
+  return res.status(201).json(newContact);
 };
 
 const getContactController = async (req: Request, res: Response) => {
@@ -19,8 +19,8 @@ const getContactController = async (req: Request, res: Response) => {
 };
 
 const updateContactController = async (req: Request, res: Response) => {
-  const updateTask = await updateContactService(req.body, req.params.id);
-  return res.json(updateTask);
+  const updateContact = await updateContactService(req.body, req.params.id);
+  return res.json(updateContact);
 };
 
 const deletContactController = async (req: Request, res: Response) => {

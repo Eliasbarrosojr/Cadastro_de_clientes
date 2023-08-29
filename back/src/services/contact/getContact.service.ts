@@ -1,4 +1,3 @@
-import { Repository } from "typeorm";
 import { AppDataSource } from "../../data-source";
 import { Contact } from "../../entities/contact.entities";
 import { TContactsResponse } from "../../interfaces/contact.interfaces";
@@ -9,10 +8,9 @@ import { contactsSchemaRes } from "../../schemas/contact.schema";
 const listContactService = async (
   userId: string
 ): Promise<TContactsResponse> => {
-  const contactRepository: Repository<Contact> =
-    AppDataSource.getRepository(Contact);
+  const contactRepository = AppDataSource.getRepository(Contact);
 
-  const userRepository: Repository<User> = AppDataSource.getRepository(User);
+  const userRepository = AppDataSource.getRepository(User);
 
   const userContact: User | null = await userRepository.findOneBy({
     id: userId,
