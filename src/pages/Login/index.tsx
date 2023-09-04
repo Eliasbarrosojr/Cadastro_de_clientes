@@ -4,6 +4,7 @@ import { TLogin, schema } from "./validator";
 import { useContext } from "react";
 import { LoginContext } from "../../providers/LoginProvider";
 import { ButtonEnter, ContainerMain, FormContainer, InputStyle } from "./style";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   const { register, handleSubmit } = useForm<TLogin>({
@@ -32,6 +33,7 @@ export const Login = () => {
         />
 
         <ButtonEnter type="submit">Entrar</ButtonEnter>
+        <Link to="register">Cadastre-se</Link>
       </FormContainer>
     </ContainerMain>
   );

@@ -29,18 +29,16 @@ export const SectionUser = styled.section`
   border-bottom: solid 2px var(--grey-3);
 `;
 
-export const SectionTec = styled.section`
+export const SectionContact = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-
-  width: 780px;
   max-width: 100%;
   height: 108px;
 `;
 
-export const TecDescript = styled.div`
+export const ContactDescript = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,10 +62,11 @@ export const TecDescript = styled.div`
     height: 30px;
     background-color: var(--grey-3);
     border: none;
+    color: white;
   }
 `;
 
-export const TecList = styled.ul`
+export const ContactList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
